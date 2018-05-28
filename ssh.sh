@@ -54,7 +54,7 @@ apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
 
 echo "clear" >> .bashrc
 echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
-echo 'echo -e "Script mod by Bustami Arifin"' >> .bashrc
+echo 'echo -e "JAGOANSSH.COM"' >> .bashrc
 echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 
@@ -62,10 +62,10 @@ echo 'echo -e ""' >> .bashrc
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://vira.cf/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/bestsshme/debssl/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Bustami Arifin</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "http://vira.cf/vps.conf"
+echo "<pre>WEBSITE JAGOANSSH.COM </pre>" > /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/bestsshme/debssl/master/vps.conf"
 service nginx restart
 
 # install openvpn
