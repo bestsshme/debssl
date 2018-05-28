@@ -1,6 +1,10 @@
 #!/bin/bash
 #Menu
 
+
+echo -e "============ SELAMAT DATANG ==========="
+echo -e ""
+echo -e ""
 echo -e "* menu      : menampilkan daftar perintah"
 echo -e "* usernew   : membuat akun SSH & OpenVPN"
 echo -e "* trial     : membuat akun trial"
