@@ -49,14 +49,13 @@ apt-get update
 # install webserver
 apt-get -y install nginx
 
-# install essential package
-apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
-
-echo "clear" >> .bashrc
-echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
-echo 'echo -e "JAGOANSSH.COM"' >> .bashrc
-echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
-echo 'echo -e ""' >> .bashrc
+# install screenfetch
+cd
+wget https://raw.githubusercontent.com/bestsshme/debssl/master/screenfetch-dev
+mv screenfetch-dev /usr/bin/screenfetch
+chmod +x /usr/bin/screenfetch
+echo "clear" >> .profile
+echo "screenfetch" >> .profile
 
 # install webserver
 cd
@@ -101,16 +100,19 @@ screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 # setting port ssh
 cd
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 444' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
 apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=3128/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 143 -p 777"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 80 -p 777"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_BANNER=""/DROPBEAR_BANNER="\/etc\/banner.net"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
+cd /etc
+wget https://raw.githubusercontent.com/bestsshme/debssl/master/banner.net
 service ssh restart
 service dropbear restart
 
