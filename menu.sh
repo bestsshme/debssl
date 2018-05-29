@@ -64,9 +64,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		;;
 		3)
 		clear
-		read -p "Enter username yg di perbarui: " uname
-                read -p "Aktif sampai tanggal Thn-Bln-Hr(YYYY-MM-DD): " expdate
-                renew_user
+		user-renew
 		exit
 		;;
 		4)
