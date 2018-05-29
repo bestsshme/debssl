@@ -36,14 +36,13 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 	echo -e "\e[031;1m 6\e[0m) Aktifkan Kill Multi Login"
 	echo -e "\e[031;1m 7\e[0m) Daftar Akun dan Expire Date"
 	echo -e "\e[031;1m 8\e[0m) Daftar Akun Aktif"
-	echo -e "\e[031;1m 9\e[0m) Daftar Akun Expire"
-	echo -e "\e[031;1m10\e[0m) Delete Akun Expire"
-	echo -e "\e[031;1m11\e[0m) Restart Webmin"
-	echo -e "\e[031;1m12\e[0m) Restart Dropbear"
-	echo -e "\e[031;1m13\e[0m) Restart Openssh"
-	echo -e "\e[031;1m14\e[0m) Restart Squid"
-	echo -e "\e[031;1m15\e[0m) Ganti Port Squid"
-	echo -e "\e[031;1m16\e[0m) Reboot Server"
+	echo -e "\e[031;1m 9\e[0m) Delete Akun Expire"
+	echo -e "\e[031;1m10\e[0m) Restart Webmin"
+	echo -e "\e[031;1m11\e[0m) Restart Dropbear"
+	echo -e "\e[031;1m12\e[0m) Restart Openssh"
+	echo -e "\e[031;1m13\e[0m) Restart Squid"
+	echo -e "\e[031;1m14\e[0m) Ganti Port Squid"
+	echo -e "\e[031;1m15\e[0m) Reboot Server"
 	echo ""
 	echo -e "\e[031;1m x\e[0m) Exit"
 	echo ""
@@ -85,26 +84,20 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		;;
 		7)
 		clear
-		not_expired_users
+		user-list
 		exit
 		;;
 		8)
 		clear
-		expired_users
+		user-expire-list
 		exit
 		;;
 		9)
 		clear
-		user-expire-list
+		delete-user-expire
 		exit
 		;;
 		10)
-		clear
-		delete-user-expire
-	        echo "user kadaluarsa berhasil di  mbah...!!!"
-		exit
-		;;
-		11)
 		clear
 		service webmin restart
 	        echo "Webmin berhasil di restart mbah...!!!" 
