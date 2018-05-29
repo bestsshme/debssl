@@ -174,6 +174,7 @@ wget -O about "https://raw.githubusercontent.com/bestsshme/debssl/master/about.s
 wget -O user-expire-list "https://raw.githubusercontent.com/bestsshme/debssl/master/user-expire-list"
 wget -O user-renew "https://raw.githubusercontent.com/bestsshme/debssl/master/user-renew"
 wget -O user-login "https://raw.githubusercontent.com/bestsshme/centos/master/user-login"
+wget -O user-limit "https://raw.githubusercontent.com/bestsshme/centos/master/user-limit"
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
 chmod +x menu
