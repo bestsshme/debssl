@@ -89,7 +89,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		;;
 		8)
 		clear
-		user-expire-list
+		user-active-list
 		exit
 		;;
 		9)
