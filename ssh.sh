@@ -175,6 +175,8 @@ wget -O user-expire-list "https://raw.githubusercontent.com/bestsshme/debssl/mas
 wget -O user-renew "https://raw.githubusercontent.com/bestsshme/debssl/master/user-renew"
 wget -O user-login "https://raw.githubusercontent.com/bestsshme/centos/master/user-login"
 wget -O user-limit "https://raw.githubusercontent.com/bestsshme/centos/master/user-limit"
+wget -O delete-user-expire "://raw.githubusercontent.com/bestsshme/centos/master/delete-user-expire"
+wget -O user-active-list "https://raw.githubusercontent.com/bestsshme/centos/master/user-active-list"
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
 chmod +x menu
@@ -190,6 +192,8 @@ chmod +x about
 chmod +x user-expire-list
 chmod +x user-renew
 chmod +x user-login
+chmod +x delete-user-expire
+chmod +x user-active-list
 
 # finishing
 cd
