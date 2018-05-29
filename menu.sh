@@ -84,7 +84,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		;;
 		7)
 		clear
-		user-list
+		member
 		exit
 		;;
 		8)
