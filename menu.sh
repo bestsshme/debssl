@@ -97,7 +97,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		;;
 		9)
 		clear
-		disable-user-expire
+		user-expire-list
 		exit
 		;;
 		10)
