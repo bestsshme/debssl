@@ -137,6 +137,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		reboot
 	        echo "Vps berhasil di reboot mbah...!!!" 
 		exit
+		;;
 		x)
 		clear
 		exit
