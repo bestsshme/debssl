@@ -171,7 +171,7 @@ wget -O resvis "https://raw.githubusercontent.com/bestsshme/debssl/master/resvis
 wget -O speedtest "hhttps://raw.githubusercontent.com/bestsshme/debssl/master/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/bestsshme/debssl/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/bestsshme/debssl/master/about.sh"
-
+wget -O user-expire-list "https://raw.githubusercontent.com/bestsshme/debssl/master/user-expire-list"
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
 chmod +x menu
@@ -184,6 +184,7 @@ chmod +x resvis
 chmod +x speedtest
 chmod +x info
 chmod +x about
+chmod +x user-expire-list
 
 # finishing
 cd
