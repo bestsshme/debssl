@@ -103,25 +103,25 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 	        echo "Webmin berhasil di restart mbah...!!!" 
 		exit
 		;;
-		12)
+		11)
 		clear
 		service dropbear restart
 	        echo "Dropbear berhasil di restart mbah...!!!"
 		exit
 		;;
-		13)
+		12)
 		clear
 		service ssh restart
 	        echo "OpenSSH berhasil di restart mbah...!!!" 
 		exit
 		;;
-		14)
+		13)
 		clear
 		service squid3 restart
 	        echo "Squid sudah di restart mbah...!!!" 
 		exit
 		;;
-		15)
+		14)
 		clear
 		echo "Silahkan ganti port Squid3 anda lalu klik enter"
 	        echo "Isi dengan angka tidak boleh huruf !!!"
@@ -132,11 +132,13 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
                 echo "Squid3 Updated Port: $PORT" 
 		exit
 		;;
-		16)
+		15)
 		clear
 		reboot
 	        echo "Vps berhasil di reboot mbah...!!!" 
-		exit
+		ex
+		
+		it
 		;;
 		x)
 		clear
