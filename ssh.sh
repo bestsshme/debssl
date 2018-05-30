@@ -187,6 +187,14 @@ chmod +x speedtest
 chmod +x info
 chmod +x about
 
+wget https://raw.githubusercontent.com/bestsshme/centos/master/banned-user && chmod +x banned-user
+wget https://raw.githubusercontent.com/bestsshme/centos/master/delete-user-expire && chmod +x delete-user-expire
+wget https://raw.githubusercontent.com/bestsshme/centos/master/user-expire-list && chmod +x user-expire-list
+wget https://raw.githubusercontent.com/bestsshme/centos/master/user-list && chmod +x user-list
+wget https://raw.githubusercontent.com/bestsshme/centos/master/user-renew && chmod +x user-renew
+wget https://raw.githubusercontent.com/bestsshme/centos/master/users && chmod +x users
+wget https://raw.githubusercontent.com/bestsshme/centos/master/user-active-list && chmod +x user-active-list
+wget hhttps://raw.githubusercontent.com/bestsshme/centos/master/test.py && chmod +x test.py
 
 # finishing
 cd
