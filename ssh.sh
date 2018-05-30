@@ -125,9 +125,15 @@ wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/bestsshme/debs
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
-# install webmin
+# install fail2ban
+apt-get -y install fail2ban;service fail2ban restart
+
+# install webmin 1.820_all.deb
 cd
-apt-get -y install webmin
+wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.680_all.deb"
+dpkg --install webmin_1.680_all.deb
+apt-get -y -f install
+rm /root/webmin_1.680_all.deb
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 service webmin restart
 
