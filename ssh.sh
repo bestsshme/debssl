@@ -171,13 +171,8 @@ wget -O resvis "https://raw.githubusercontent.com/bestsshme/debssl/master/resvis
 wget -O speedtest "hhttps://raw.githubusercontent.com/bestsshme/debssl/master/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/bestsshme/debssl/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/bestsshme/debssl/master/about.sh"
-wget -O user-expire-list "https://raw.githubusercontent.com/bestsshme/debssl/master/user-expire-list"
-wget -O user-renew "https://raw.githubusercontent.com/bestsshme/debssl/master/user-renew"
-wget -O user-login "https://raw.githubusercontent.com/bestsshme/centos/master/user-login"
-wget -O user-limit "https://raw.githubusercontent.com/bestsshme/centos/master/user-limit"
-wget -O delete-user-expire "://raw.githubusercontent.com/bestsshme/centos/master/delete-user-expire"
-wget -O user-active-list "https://raw.githubusercontent.com/bestsshme/centos/master/user-active-list"
-echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
+
+echo "1 2 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
 chmod +x menu
 chmod +x usernew
@@ -189,11 +184,7 @@ chmod +x resvis
 chmod +x speedtest
 chmod +x info
 chmod +x about
-chmod +x user-expire-list
-chmod +x user-renew
-chmod +x user-login
-chmod +x delete-user-expire
-chmod +x user-active-list
+
 
 # finishing
 cd
