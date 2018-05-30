@@ -49,13 +49,15 @@ apt-get update
 # install webserver
 apt-get -y install nginx
 
-# install screenfetch
-cd
-wget https://raw.githubusercontent.com/bestsshme/debssl/master/screenfetch-dev
-mv screenfetch-dev /usr/bin/screenfetch
-chmod +x /usr/bin/screenfetch
-echo "clear" >> .profile
-echo "screenfetch" >> .profile
+
+# install essential package
+apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
+
+echo "clear" >> .bashrc
+echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
+echo 'echo -e "WELCOME TO VPS DEBIAN' >> .bashrc
+echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
+echo 'echo -e ""' >> .bashrc
 
 # install webserver
 cd
