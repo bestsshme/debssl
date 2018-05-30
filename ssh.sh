@@ -50,12 +50,14 @@ apt-get update
 apt-get -y install nginx
 
 
-#screfatcher
-wget https://github.com/KittyKatt/screenFetch/raw/master/screenfetch-dev
-mv screenfetch-dev /usr/bin/screenfetch
-chmod +x /usr/bin/screenfetch
-echo "clear" >> .bash_profile
-echo "screenfetch" >> .bash_profile
+# install essential package
+apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
+
+echo "clear" >> .bashrc
+echo 'echo -e "Selamat datang di server $HOSTNAME" | lolcat' >> .bashrc
+echo 'echo -e "JAGOANSSH.COM"' >> .bashrc
+echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
+echo 'echo -e "---------------------------------------------------------------"' >> .bashrc
 
 # install webserver
 cd
