@@ -169,7 +169,7 @@ wget -O hapus "https://raw.githubusercontent.com/bestsshme/debssl/master/hapus.s
 wget -O cek "https://raw.githubusercontent.com/bestsshme/debssl/master/user-login.sh"
 wget -O member "https://raw.githubusercontent.com/bestsshme/debssl/master/user-list.sh"
 wget -O resvis "https://raw.githubusercontent.com/bestsshme/debssl/master/resvis.sh"
-wget -O speedtest "hhttps://raw.githubusercontent.com/bestsshme/debssl/master/speedtest_cli.py"
+wget -O speedtest "https://raw.githubusercontent.com/bestsshme/debssl/master/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/bestsshme/debssl/master/info.sh"
 wget -O about "https://raw.githubusercontent.com/bestsshme/debssl/master/about.sh"
 
